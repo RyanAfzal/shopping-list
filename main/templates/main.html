@@ -3,6 +3,23 @@
 {% block content %}
     <h1>Shopping List Page</h1>
 
+    <br>
+
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar   {{name}}</span>
+          <div class="d-flex justify-content-end"></div>
+            <a href="{% url 'main:logout' %}">
+              <button>
+                Logout
+              </button>
+            </a>
+          </div>
+        </div>
+    </nav>
+      
+    <br>
+
     <h5>Name:</h5>
     <p>{{name}}</p>
 
@@ -45,11 +62,6 @@
     <a href="{% url 'main:create_product' %}">
         <button>
             Add New Product
-            <a href="{% url 'main:logout' %}">
-                <button>
-                    Logout
-                </button>
-            </a>
         </button>
     </a>
     <h5>Sesi terakhir login: {{ last_login }}</h5>
